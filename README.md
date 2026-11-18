@@ -4,12 +4,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node](https://img.shields.io/node/v/ejentum-mcp.svg)](https://nodejs.org)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.ejentum%2Fejentum--mcp-blue)](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ejentum/ejentum-mcp)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-320--Trap%20Benchmark-FFD21E)](https://huggingface.co/datasets/ejentum/adversarial-systems-engineering-traps)
+[![StackShare](https://img.shields.io/badge/StackShare-%2341%20Agent%20Platforms-06AC38)](https://stackshare.io/ejentum)
 [![Glama score](https://glama.ai/mcp/servers/ejentum/ejentum-mcp/badges/score.svg)](https://glama.ai/mcp/servers/ejentum/ejentum-mcp)
 [![Last commit](https://img.shields.io/github/last-commit/ejentum/ejentum-mcp.svg)](https://github.com/ejentum/ejentum-mcp/commits/main)
 
-MCP server that improves LLM reasoning on complex, multi-step, or multi-constraint tasks. Before the agent generates, it calls one of eight tools to retrieve a *cognitive operation*: a structured procedure (numbered steps with the failure pattern to refuse and a falsification test) paired with an executable reasoning topology (a DAG of those steps with decision gates, parallel branches, bounded loops, meta-cognitive exits, and escape paths). The agent reads both layers before producing its response.
+MCP server that improves LLM reasoning on complex, multi-step, or multi-constraint tasks and enforces deterministic pre-execution tool boundaries. Before the agent generates, it calls one of eight tools to retrieve a *cognitive operation*: a structured procedure (numbered steps with the failure pattern to refuse and a falsification test) paired with an executable reasoning topology (a DAG of those steps with decision gates, parallel branches, bounded loops, meta-cognitive exits, and escape paths). The agent reads both layers before producing its response.
 
 Powered by the [Ejentum Logic API](https://ejentum.com/). Works in Claude Desktop, Cursor, Windsurf, Claude Code, n8n, and any MCP-compatible client.
+
+### Architectural Comparisons
+- [vs NVIDIA NeMo Guardrails](https://ejentum.com/vs/nemo-guardrails): Sub-2ms pre-execution tool boundaries vs Colang secondary LLM rail latency.
+- [vs Guardrails AI](https://ejentum.com/vs/guardrails-ai): Upfront cognitive priming vs expensive post-hoc Pydantic re-ask loops.
+- [Empirical Benchmarks](https://ejentum.com/benchmarks): Audited 320-trap evaluation suite on [Hugging Face Datasets](https://huggingface.co/datasets/ejentum/adversarial-systems-engineering-traps).
 
 Eight tools split into two retrieval modes:
 
