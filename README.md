@@ -33,8 +33,10 @@ Two install paths use the same `EJENTUM_API_KEY`:
 ## Install
 
 You need:
-- An Ejentum API key. 30-day free trial (no card) at [ejentum.com/pricing](https://ejentum.com/pricing).
+- An Ejentum API key. Mint an instant 1-click sandbox key (no email or signup required) or get a 30-day trial at [ejentum.com/pricing](https://ejentum.com/pricing).
 - Node.js 18+.
+
+> **Quick Testing**: You can mint an anonymous test API key in 1 click (no email or account registration needed) directly at [ejentum.com/pricing](https://ejentum.com/pricing) or via `curl -X POST https://api.ejentum.com/api/trial/request -H "Content-Type: application/json" -d "{}"`.
 
 ### Install from npm
 
